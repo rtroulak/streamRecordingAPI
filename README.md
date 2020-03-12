@@ -113,7 +113,7 @@ Required request data params:
  
  Example: 
  ```
- curl --location --request POST 'http://127.0.0.1:5000/recording' \
+curl --location --request POST 'http://127.0.0.1:5000/recording' \
 --header 'Content-Type: application/json' \
 --data-raw '    {
         "channel_id": 6,
