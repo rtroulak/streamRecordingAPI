@@ -8,8 +8,8 @@ import atexit
 import os
 import subprocess
 
-
-POOL_TIME = 10 #Seconds
+duration = 1800  # 30 min to Seconds
+tmp_duration = 5  # 30 min to Seconds
 
 app = Flask(__name__)
 
@@ -18,23 +18,24 @@ db_uri = app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///recs_bmat.db'
 engine = create_engine(db_uri)
 
 
+def worker(num):
+    """thread worker function"""
+    print('START Worker: %s' % num)
+    time.sleep(tmp_duration)
+    print('END Worker: %s' % num)
+    return
 
-def table_channels():
-    result = engine.execute('SELECT * FROM '
-                            '"Channel"')
-    for _r in result:
-        # Set the next thread to happen
-        yourThread = threading.Timer(POOL_TIME, exec_func(_r[0]), ())
-        yourThread.start()
-        urls = []
-        # print(_r[0])
 
-    return result
+threads = []
+for i in range(5):
+    t = threading.Thread(target=worker, args=(i,))
+    threads.append(t)
+    t.start()
 
 
 def exec_func(x):
     bashCommand = "cwm --rdf test.rdf --ntriples > test.nt"
 
+
 def main(db):
     print("My Rec File is here")
-    table_channels()
