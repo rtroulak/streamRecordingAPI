@@ -96,7 +96,7 @@ curl --header "Content-Type: application/json" \
 	"name": "Rock FM",
   "keyname": "es-rock-01",
 	"type": "radio",
-	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}' http://127.0.0.1:5000/channel/
+	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}' http://127.0.0.1:5000/channel
   ```
  
 #### Add Recording in the database
@@ -121,5 +121,74 @@ curl --header "Content-Type: application/json" \
 	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}' http://127.0.0.1:5000/recording
   ```
   
+#### Create a new channel, or update an existing one
+    
+```/channel/<id> ``` (PUT)
+
+Required request data params: 
+ `name=[string]`
+ `keyname=[string] must have 10 char length`
+ `type=[string] enum['radio','TV']`
+ `url=[string]`
+ 
+Example:
+```
+curl --header "Content-Type: application/json" \
+ --request PUT \
+--data '{
+	"name": "Rock FM",
+  "keyname": "es-rock-01",
+	"type": "radio",
+	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}' http://127.0.0.1:5000/channel/4
+ ``` 
+ 
+ #### Create a new channel, or update an existing one
+    
+```/recording/<id> ``` (PUT)
+
+Required request data params: 
+  `channel_id=[int]`
+ `start_time=[int] timestamp (datetime)`
+ `end_time=[int] timestamp (datetime)`
+ `path=[string]`
+
+Example:
+```
+curl --header "Content-Type: application/json" \
+ --request PUT \
+ --data '{
+	"channel_id": 2,
+  "start_time": 1583929812000,
+	"end_time": 1583929812000,
+	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}' http://127.0.0.1:5000/recording/3
+  ```
+
+There is a sub-directory test_api, where I've added some sample data (scraped with Scrapy) to the databse, using the API.
 
 
+
+
+  
+
+ #### Delete a channel
+ 
+ ```/channel/<id> ``` (DELETE)
+ 
+ 
+ Example:
+
+```
+curl ---request DELETE  http://127.0.0.1:5000/channel/2
+```
+
+ #### Delete a recording
+ 
+ ```/channel/<id> ``` (DELETE)
+ 
+ 
+ Example:
+
+```
+curl ---request DELETE  http://127.0.0.1:5000/recording/2
+```
+I decided not to require Authentication to make testing easier 
