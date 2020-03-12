@@ -25,6 +25,7 @@ In folder /home/babufrik/PycharmProjects/bmat_rtroulak
 ```
 Well, http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
 
+## Retrieve
 
 #### Retrieve all channels 
 
@@ -75,7 +76,7 @@ curl http://127.0.0.1:5000/channel/<channel_id>/recordings
 ```
 
 
-
+## Create
 
 #### Add channel in the database
 
@@ -123,6 +124,8 @@ curl --location --request POST 'http://127.0.0.1:5000/recording' \
     }'
   ```
   
+## Update (or Create) 
+ 
 #### Create a new channel, or update an existing one
     
 ```/channel/<id> ``` (PUT)
@@ -185,7 +188,7 @@ There is a sub-directory test_api, where I've added some sample data (scraped wi
 
 
 
-
+## Delete
   
 
  #### Delete a channel
