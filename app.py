@@ -82,7 +82,7 @@ def get_channel(id):
 
 
 # Get All Recordings
-@app.route('/recordings', methods=['GET'])
+@app.route('/recording', methods=['GET'])
 def get_recordings():
     all_recordings = Recording.query.all()
     result = recordings_schema.dump(all_recordings)
@@ -90,14 +90,14 @@ def get_recordings():
 
 
 # Get Single Channel
-@app.route('/recordings/<id>', methods=['GET'])
+@app.route('/recording/<id>', methods=['GET'])
 def get_recording(id):
     recording = Recording.query.get(id)
     return recording_schema.jsonify(recording)
 
 
 # Get Single Channel
-@app.route('/channel/<channel_id>/recordings', methods=['GET'])
+@app.route('/channel/<channel_id>/recording', methods=['GET'])
 def get_recording_channel(channel_id):
     all_recordings = Recording.query.filter_by(channel_id=channel_id)
     # all_recordings = Recording.query.all()
