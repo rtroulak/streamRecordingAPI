@@ -1,11 +1,24 @@
-# streamRecordingAPI
-Create a RestAPI using Flask, Marsmallow and SQLAlchemy
+# Stream Recording API
+Create a CRUD recording RestAPI using Flask, Marsmallow and SQLAlchemy
 
 
-Python Libraries to install:
-* pip install flask
-* pip install Flask-SQLAlchemy
-* pip install flask_marshmallow
+## Technologies
+Project is created with:
+* Python version: 3.6
+* Flask version: 1.1.1
+* Flask-SQLAlchemy version: 2.4.1
+* flask-marshmallow version: 2.4.1
+
+
+Python Libraries need to install:
+* ```pip install flask```
+* ```pip install Flask-SQLAlchemy```
+* ```pip install flask_marshmallow```
+
+or just run
+
+```pip install -r requirements.txt```
+
 
 
 
