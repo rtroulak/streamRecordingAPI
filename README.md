@@ -23,7 +23,7 @@ In folder /home/babufrik/PycharmProjects/bmat_rtroulak
  * Debug mode: off
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
-well http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
+Well, http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
 
 
 #### Retrieve all channels 
@@ -99,7 +99,7 @@ Required request data params:
 	"type": "radio",
 	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}
 
- 
+  ```
 #### Add Recording in the database
 
 ```/recording ``` (POST)
@@ -113,13 +113,14 @@ Required request data params:
  
  Example: 
  ```
-curl --header "Content-Type: application/json" 
- --request POST 
- --data '{
-	"channel_id": 2,
-  "start_time": 1583929812000,
-	"end_time": 1583929812000,
-	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}' http://127.0.0.1:5000/recording
+ curl --location --request POST 'http://127.0.0.1:5000/recording' \
+--header 'Content-Type: application/json' \
+--data-raw '    {
+        "channel_id": 6,
+        "end_time": 158392981021020,
+        "path": "http://hlsliveamdgl1-lh.akama\nihd.net/i/hlsdvrlive_1@584096\n/index_0400_av-p.m3u8?sd=10&r\nebase1=on",
+        "start_time": 158392981021030
+    }'
   ```
   
 #### Create a new channel, or update an existing one
