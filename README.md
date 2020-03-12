@@ -141,13 +141,14 @@ Optional request data params:
  
 Example:
 ```
-curl --header "Content-Type: application/json" 
- --request PUT 
---data '{
+curl --location --request PUT 'http://127.0.0.1:5000/channel/7' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
 	"name": "Rock FM",
   "keyname": "es-rock-01",
 	"type": "radio",
-	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}' http://127.0.0.1:5000/channel/4
+	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}'
+
  ``` 
  
  #### Create a new channel, or update an existing one
@@ -168,13 +169,16 @@ Optional request data params:
 
 Example:
 ```
-curl --header "Content-Type: application/json" 
- --request PUT
- --data '{
+
+curl --location --request PUT 'http://127.0.0.1:5000/recording/3' \
+--header 'Content-Type: application/json' \
+--data-raw '{
 	"channel_id": 2,
   "start_time": 1583929812000,
 	"end_time": 1583929812000,
-	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}' http://127.0.0.1:5000/recording/3
+	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}'
+    
+
   ```
 
 There is a sub-directory test_api, where I've added some sample data (scraped with Scrapy) to the databse, using the API.
