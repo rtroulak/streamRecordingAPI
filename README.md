@@ -23,8 +23,9 @@ In folder /home/babufrik/PycharmProjects/bmat_rtroulak
  * Debug mode: off
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
-well http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
+Well, http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
 
+## Retrieve
 
 #### Retrieve all channels 
 
@@ -75,7 +76,7 @@ curl http://127.0.0.1:5000/channel/<channel_id>/recordings
 ```
 
 
-
+## Create
 
 #### Add channel in the database
 
@@ -90,15 +91,16 @@ Required request data params:
  
  Example: 
  ```
-curl --header "Content-Type: application/json" \
- --request POST \
- --data '{
+ 
+ curl --location --request POST 'http://127.0.0.1:5000/channel' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
 	"name": "Rock FM",
   "keyname": "es-rock-01",
 	"type": "radio",
-	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}' http://127.0.0.1:5000/channel
+	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}
+
   ```
- 
 #### Add Recording in the database
 
 ```/recording ``` (POST)
@@ -112,20 +114,29 @@ Required request data params:
  
  Example: 
  ```
-curl --header "Content-Type: application/json" \
- --request POST \
- --data '{
-	"channel_id": 2,
-  "start_time": 1583929812000,
-	"end_time": 1583929812000,
-	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}' http://127.0.0.1:5000/recording
+curl --location --request POST 'http://127.0.0.1:5000/recording' \
+--header 'Content-Type: application/json' \
+--data-raw '    {
+        "channel_id": 6,
+        "end_time": 158392981021020,
+        "path": "http://hlsliveamdgl1-lh.akama\nihd.net/i/hlsdvrlive_1@584096\n/index_0400_av-p.m3u8?sd=10&r\nebase1=on",
+        "start_time": 158392981021030
+    }'
   ```
   
+## Update (or Create) 
+ 
 #### Create a new channel, or update an existing one
     
 ```/channel/<id> ``` (PUT)
 
 Required request data params: 
+  `name=[string]` or
+ `keyname=[string] must have 10 char length` or
+ `type=[string] enum['radio','TV']` or
+ `url=[string]`
+ 
+Optional request data params:
  `name=[string]`
  `keyname=[string] must have 10 char length`
  `type=[string] enum['radio','TV']`
@@ -133,13 +144,14 @@ Required request data params:
  
 Example:
 ```
-curl --header "Content-Type: application/json" \
- --request PUT \
---data '{
+curl --location --request PUT 'http://127.0.0.1:5000/channel/7' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
 	"name": "Rock FM",
   "keyname": "es-rock-01",
 	"type": "radio",
-	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}' http://127.0.0.1:5000/channel/4
+	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}'
+
  ``` 
  
  #### Create a new channel, or update an existing one
@@ -147,27 +159,36 @@ curl --header "Content-Type: application/json" \
 ```/recording/<id> ``` (PUT)
 
 Required request data params: 
-  `channel_id=[int]`
+  `channel_id=[int]` or
+  `start_time=[int] timestamp (datetime)` or
+ `end_time=[int] timestamp (datetime)` or
+ `path=[string]`
+ 
+Optional request data params:
+`channel_id=[int]`
  `start_time=[int] timestamp (datetime)`
  `end_time=[int] timestamp (datetime)`
  `path=[string]`
 
 Example:
 ```
-curl --header "Content-Type: application/json" \
- --request PUT \
- --data '{
+
+curl --location --request PUT 'http://127.0.0.1:5000/recording/3' \
+--header 'Content-Type: application/json' \
+--data-raw '{
 	"channel_id": 2,
   "start_time": 1583929812000,
 	"end_time": 1583929812000,
-	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}' http://127.0.0.1:5000/recording/3
+	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}'
+    
+
   ```
 
 There is a sub-directory test_api, where I've added some sample data (scraped with Scrapy) to the databse, using the API.
 
 
 
-
+## Delete
   
 
  #### Delete a channel
@@ -191,4 +212,4 @@ curl --request DELETE  http://127.0.0.1:5000/channel/2
 ```
 curl --request DELETE  http://127.0.0.1:5000/recording/2
 ```
-I decided not to require Authentication to make testing easier 
+I decided not to require Authentication from my api calls to avoid conflicts and make testing easier 
