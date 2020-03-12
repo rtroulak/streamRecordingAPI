@@ -90,14 +90,15 @@ Required request data params:
  
  Example: 
  ```
-curl --header "Content-Type: application/json" \
- --request POST \
- --data '{
+ 
+ curl --location --request POST 'http://127.0.0.1:5000/channel' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
 	"name": "Rock FM",
   "keyname": "es-rock-01",
 	"type": "radio",
-	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}' http://127.0.0.1:5000/channel
-  ```
+	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}
+
  
 #### Add Recording in the database
 
@@ -112,8 +113,8 @@ Required request data params:
  
  Example: 
  ```
-curl --header "Content-Type: application/json" \
- --request POST \
+curl --header "Content-Type: application/json" 
+ --request POST 
  --data '{
 	"channel_id": 2,
   "start_time": 1583929812000,
@@ -139,8 +140,8 @@ Optional request data params:
  
 Example:
 ```
-curl --header "Content-Type: application/json" \
- --request PUT \
+curl --header "Content-Type: application/json" 
+ --request PUT 
 --data '{
 	"name": "Rock FM",
   "keyname": "es-rock-01",
@@ -166,8 +167,8 @@ Optional request data params:
 
 Example:
 ```
-curl --header "Content-Type: application/json" \
- --request PUT \
+curl --header "Content-Type: application/json" 
+ --request PUT
  --data '{
 	"channel_id": 2,
   "start_time": 1583929812000,
