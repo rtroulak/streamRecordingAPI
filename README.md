@@ -2,7 +2,7 @@
 Create a CRUD recording RestAPI using Flask, Marsmallow and SQLAlchemy
 
 
-Python Libraries to install:
+Python Libraries need to install:
 * pip install flask
 * pip install Flask-SQLAlchemy
 * pip install flask_marshmallow
