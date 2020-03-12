@@ -212,4 +212,4 @@ curl --request DELETE  http://127.0.0.1:5000/channel/2
 ```
 curl --request DELETE  http://127.0.0.1:5000/recording/2
 ```
-I decided not to require Authentication to make testing easier 
+I decided not to require Authentication from my api calls to avoid conflicts and make testing easier 
