@@ -169,12 +169,12 @@ def update_recording(id):
     channel_id = request.json['channel_id']
     start_time = request.json['start_time']
     end_time = request.json['end_time']
-    path = request.json['path']
+    url = request.json['url']
 
     recording.channel_id = channel_id
     recording.start_time = start_time
     recording.end_time = end_time
-    recording.path = path
+    recording.url = url
 
     db.session.commit()
 
