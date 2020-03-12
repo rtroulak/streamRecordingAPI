@@ -178,7 +178,7 @@ There is a sub-directory test_api, where I've added some sample data (scraped wi
  Example:
 
 ```
-curl ---request DELETE  http://127.0.0.1:5000/channel/2
+curl --request DELETE  http://127.0.0.1:5000/channel/2
 ```
 
  #### Delete a recording
@@ -189,6 +189,6 @@ curl ---request DELETE  http://127.0.0.1:5000/channel/2
  Example:
 
 ```
-curl ---request DELETE  http://127.0.0.1:5000/recording/2
+curl --request DELETE  http://127.0.0.1:5000/recording/2
 ```
 I decided not to require Authentication to make testing easier 
