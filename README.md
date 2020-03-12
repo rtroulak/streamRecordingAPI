@@ -1,5 +1,5 @@
 # streamRecordingAPI
-Init Commit RestAPI Flask Marsmallow SQLAlchemy
+Create a RestAPI using Flask, Marsmallow and SQLAlchemy
 
 
 Python Libraries to install:
