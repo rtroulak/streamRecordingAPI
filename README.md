@@ -1,5 +1,5 @@
 # streamRecordingAPI
-Create a RestAPI using Flask, Marsmallow and SQLAlchemy
+Create a recording RestAPI using Flask, Marsmallow and SQLAlchemy
 
 
 Python Libraries to install:
