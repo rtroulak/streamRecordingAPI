@@ -126,6 +126,12 @@ curl --header "Content-Type: application/json" \
 ```/channel/<id> ``` (PUT)
 
 Required request data params: 
+  `name=[string]` or
+ `keyname=[string] must have 10 char length` or
+ `type=[string] enum['radio','TV']` or
+ `url=[string]`
+ 
+Optional request data params:
  `name=[string]`
  `keyname=[string] must have 10 char length`
  `type=[string] enum['radio','TV']`
@@ -147,7 +153,13 @@ curl --header "Content-Type: application/json" \
 ```/recording/<id> ``` (PUT)
 
 Required request data params: 
-  `channel_id=[int]`
+  `channel_id=[int]` or
+  `start_time=[int] timestamp (datetime)` or
+ `end_time=[int] timestamp (datetime)` or
+ `path=[string]`
+ 
+Optional request data params:
+`channel_id=[int]`
  `start_time=[int] timestamp (datetime)`
  `end_time=[int] timestamp (datetime)`
  `path=[string]`
