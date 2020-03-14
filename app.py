@@ -42,6 +42,10 @@ def worker(channel, debug=False):
         if not debug:
             cmd += '> /dev/null 2>&1'  # this command hide terminal messages from python console
         os.system(cmd)
+        Recording = api.Recording(channel_id=channel.id, start_time=now, end_time=end, path='/recording/' + filename)
+        api.Recording.query
+        api.db.session.add(Recording)
+        api.db.session.commit()
 
     else:
         print('Invalid Channel Type')
