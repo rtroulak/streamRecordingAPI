@@ -1,4 +1,3 @@
-"Test show my name on github from pycharm"
 # Stream Recording API
 Create a CRUD recording RestAPI using Flask, Marsmallow and SQLAlchemy
 
