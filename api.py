@@ -32,8 +32,8 @@ class Channel(db.Model):
 class Recording(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     channel_id = db.Column(db.Integer)
-    start_time = db.Column(db.Integer)  # i set this as datetime but we have an issue on sqlite with datetimes
-    end_time = db.Column(db.Integer)
+    start_time = db.Column(db.Text)  # i set this as datetime but we have an issue on sqlite with datetimes
+    end_time = db.Column(db.Text)  # i set this as datetime but we have an issue on sqlite with datetimes
     path = db.Column(db.Text)
 
     def __init__(self, channel_id, start_time, end_time, path):
