@@ -20,15 +20,17 @@ def worker(channel):
         filename = str(channel.keyname) + '_' + socket.gethostname() + '_' + str(s2) + '.aac'
         cmd = 'ffmpeg -i "' + str(channel.url) + '" -acodec aac -ab 48000 -ar 22050 -ac 1 -t {1} ' \
                                                  'recordings/{0} '.format(str(filename), str(tmp_duration))
-        cmd += '> /dev/null 2>&1'
+        if channel.keyname != "gb-rnm--01":
+            cmd += '> /dev/null 2>&1'
         os.system(cmd)
     elif channel.type == 'TV':
         print('Start Record TV Streaming : %s' % channel.name)
         filename = str(channel.keyname) + '_' + socket.gethostname() + '_' + str(s2) + '.mp4'
-        cmd = 'ffmpeg -i "' + str(channel.url) + '" -r 10 -vcodec libx264 -movflags frag_keyframe -acodec libfaac -ab ' \
+        cmd = 'ffmpeg -i "' + str(channel.url) + '" -r 10 -vcodec libx264 -movflags frag_keyframe -acodec aac -ab ' \
                                                  '48000 -ar 22050 -ac 1 -s 160x120 -t {1} ' \
                                                  'recordings/{0} '.format(str(filename), str(tmp_duration))
-        # cmd += '> /dev/null 2>&1'
+        if channel.keyname != "gb-rnm--01":
+            cmd += '> /dev/null 2>&1'
         os.system(cmd)
 
     else:

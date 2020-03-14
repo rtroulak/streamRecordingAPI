@@ -2,6 +2,7 @@
 Create a CRUD recording RestAPI using Flask, Marsmallow and SQLAlchemy
 
 
+
 ## Technologies
 Project is created with:
 * Python version: 3.6
@@ -18,8 +19,6 @@ Python Libraries need to install:
 or just run
 
 ```pip install -r requirements.txt```
-
-
 
 
 # API endpoints:
@@ -226,3 +225,22 @@ curl --request DELETE  http://127.0.0.1:5000/channel/2
 curl --request DELETE  http://127.0.0.1:5000/recording/2
 ```
 I decided not to require Authentication from my api calls to avoid conflicts and make testing easier 
+
+
+##Additional Information for testing 
+
+Some stream urls for TV and Radio streams which have permissions to read from our application:
+
+|     Name       | Keyname  |  type  | url  |
+|-------------| :-----:| :--------------:| :-----:|
+| RTV Murcia | es-mur--03|    TV  | http://rtvmurcia_01-lh.akamaihd.net/i/rtvmurcia_1_0@507973/master.m3u8 |
+|   Kool London Radio  |     uk-koo--01    |   TV  |  http://w10.streamgb.com:1935/kool/kool/playlist.m3u8   |
+|  MAD TV Greece   |     gr-mad--03    |   TV  |   https://itv.streams.ovh/magictv/magictv/playlist.m3u8  |
+|   Music Top TV  |     ar-top--01    |   TV  |   http://live-edge01.telecentro.net.ar/live/msctphd-720/playlist.m3u8  |
+|   Vega Baja TV  |   es-vega-01      |  TV   |  http://185.29.68.24/tvb.m3u8   |
+|  Radio 3   |    es-rn3--01     |   radio  |  http://hlsliveamdgl0-lh.akamaihd.net/i/rnerne3_1@793568/index_32_a-p.m3u8   |
+|   Rock FM  |     es-rock-01    |  radio   |   http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8  |
+|  RastaPank UOC   |     gr-rstpk-1    |  radio   |   http://rs.radio.uoc.gr:8000/uoc_64.mp3  |
+|   Kritikorama  |     gr-kriti-2    |  radio   | http://46.4.37.132:9382/;    |
+|   Radio 21 Hannover  |   de-hann-02      |   radio  |  http://api.new.livestream.com/accounts/22300508/events/6675945/live.m3u8   |
+
