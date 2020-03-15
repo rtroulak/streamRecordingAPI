@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+import threading
+
+from recorder import recorder
 
 app = Flask(__name__)
 
@@ -115,9 +118,15 @@ def add_channel():
     url = request.json['url']
 
     new_channel = Channel(name, keyname, type, url)
-
+    thread_channel = new_channel
     db.session.add(new_channel)
     db.session.commit()
+
+    if new_channel.id:
+        t = threading.Thread(target=recorder, args=(thread_channel, False,))
+        threads.append(t)
+        pid = threading.current_thread().ident
+        t.start()
 
     return channel_schema.jsonify(new_channel)
 
@@ -155,7 +164,14 @@ def update_channel(id):
     channel.type = type
     channel.url = url
 
-    db.session.commit()
+    commited = db.session.commit()
+    print(commited)
+
+    if channel.id:
+        t = threading.Thread(target=recorder, args=(channel, False,))
+        threads.append(t)
+        pid = threading.current_thread().ident
+        t.start()
 
     return channel_schema.jsonify(channel)
 
@@ -168,12 +184,12 @@ def update_recording(id):
     channel_id = request.json['channel_id']
     start_time = request.json['start_time']
     end_time = request.json['end_time']
-    url = request.json['url']
+    path = request.json['path']
 
     recording.channel_id = channel_id
     recording.start_time = start_time
     recording.end_time = end_time
-    recording.url = url
+    recording.path = path
 
     db.session.commit()
 
@@ -201,5 +217,11 @@ def delete_recording(id):
     return recording_schema.jsonify(recording)
 
 
+threads = []
+all_channels = Channel.query.all()
+for x in all_channels:
+    t = threading.Thread(target=recorder, args=(x, False,))
+    threads.append(t)
+    t.start()
 if __name__ == '__main__':
     app.run()
