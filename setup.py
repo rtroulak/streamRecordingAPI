@@ -12,7 +12,7 @@ setup(
     author_email='rtroulak@protonmail.com',
     url='https://github.com/rtroulak/streamRecordingAPI',
     download_url='https://github.com/rtroulak/streamRecordingAPI/archive/master.zip',
-    keywords=['rice', 'serialization', 'deserialization', 'doc'],
+    keywords=['RestAPI', 'recording', 'stream', 'sqlAlchemy'],
     classifiers=['Topic :: RestAPI', 'Topic :: Software Development', 'Topic :: System',
                  'Topic :: Recording', 'Topic :: Streaming'],
     install_requires=install_requires

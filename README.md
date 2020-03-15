@@ -9,21 +9,56 @@ Project is created with:
 * Flask version: 1.1.1
 * Flask-SQLAlchemy version: 2.4.1
 * flask-marshmallow version: 2.4.1
+* OS: Ubuntu 18.04
+* IDE: Pycharm
+
+# Installation
+In the application folder create python environment. Python virtual environment is a self-contained directory tree that includes a Python installation and number of additional packages.
 
 
-Python Libraries need to install:
-* ```pip install flask```
-* ```pip install Flask-SQLAlchemy```
-* ```pip install flask_marshmallow```
+Check for python version:
 
-or just run
+```python3 -V```
+
+Install Virtual Environment:
+
+```sudo apt install python3-venv```
+
+Run the following command to create your new virtual environment:
+
+``` python3 -m venv env ```
+
+ Activate your new virtual environment, to start using this:
+
+```. env/bin/activate ```
+
+In the requirements file there are all the required packages that required for this project, run :
 
 ```pip install -r requirements.txt```
 
 
-# API endpoints:
+or install Python Libraries that required for this porject manually:
+* ```pip install flask```
+* ```pip install Flask-SQLAlchemy```
+* ```pip install flask_marshmallow```
+* ```pip install marshmallow-sqlalchemy```
+* ```pip install ffmpeg-python```
+* ```pip install -U pytest```
+* ```pip install ffmpeg==1.4```
+* ```pip install requests```
 
-Run the main app.py file of our RestAPI and terminal must display something like this:
+
+
+# Use Stream Recording API
+
+Start the restAPI server with this command:
+
+```python3 app.py```
+
+RestAPI must start and terminal must display something like this:
+
+
+Output:
 ```
 FLASK_APP = app.py
 FLASK_ENV = development
@@ -35,7 +70,27 @@ In folder /home/babufrik/PycharmProjects/bmat_rtroulak
  * Debug mode: off
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
-Well, http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
+http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
+
+The recording code file to start record with the server all the existing channels and to receive
+api user commands via API 
+
+Output:
+```
+Start Record TV Streaming : MAD TV Greece 
+Start Record TV Streaming : RTV Murcia 
+Start Record Radio Streaming : Rock FM 
+Start Record Radio Streaming : RastaPank UOC 
+```
+
+You can use all the API endpoints to retrieve,create,edit or retrieve new channel and recording while server is on
+
+
+All the recordings saved on /recordings directory in the project.
+
+# API endpoints:
+
+Run the main app.py file of our RestAPI and terminal must display something like this:
 
 ## Retrieve
 
@@ -224,7 +279,7 @@ curl --request DELETE  http://127.0.0.1:5000/recording/2
 I decided not to require Authentication from my api calls to avoid conflicts and make testing easier 
 
 
-## Additional Information for testing 
+## Additional Information and usefull links for testing 
 
 Some stream urls for TV and Radio streams which have permissions to read from our application:
 

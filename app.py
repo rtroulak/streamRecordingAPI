@@ -1,9 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import request, jsonify
 import threading
+
 
 from classes import Channel, channel_schema, recordings_schema, Recording, recording_schema, db, channels_schema, app
 from recorder import recorder
-
 
 
 # GET method functions for Select
@@ -60,7 +60,7 @@ def add_channel():
     thread_channel = new_channel
     db.session.add(new_channel)
     db.session.commit()
-
+    threads = []
     if new_channel.id:
         t = threading.Thread(target=recorder, args=(thread_channel, False,))
         threads.append(t)
@@ -104,7 +104,7 @@ def update_channel(id):
     channel.url = url
 
     db.session.commit()
-
+    threads = []
     if channel.id:
         t = threading.Thread(target=recorder, args=(channel, False,))
         threads.append(t)
@@ -139,10 +139,12 @@ def update_recording(id):
 @app.route('/channel/<id>', methods=['DELETE'])
 def delete_channel(id):
     channel = Channel.query.get(id)
-    db.session.delete(channel)
-    db.session.commit()
-
-    return channel_schema.jsonify(channel)
+    if channel:
+        db.session.delete(channel)
+        db.session.commit()
+        return channel_schema.jsonify(channel)
+    else:
+        return channel_schema.jsonify({'msg': 'Channel Not Found'}, 400)
 
 
 # Delete Recording
@@ -154,14 +156,6 @@ def delete_recording(id):
 
     return recording_schema.jsonify(recording)
 
-
-# Look up to the channel table in the DB and start recording any url found in there
-threads = []
-all_channels = Channel.query.all()
-for x in all_channels:
-    t = threading.Thread(target=recorder, args=(x, False,))
-    threads.append(t)
-    t.start()
 
 if __name__ == '__main__':
     app.run()

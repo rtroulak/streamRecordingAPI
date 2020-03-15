@@ -59,6 +59,15 @@ def recorder(channel, debug=False):
         else:
             print('Invalid Channel Type')
         return
-    else: # Id channel is Deleted stop recording this in the future
+    else:  # Id channel is Deleted stop recording this in the future
         print(channel.name, " is deleted")
         return
+
+
+# Look up to the channel table in the DB and start recording any url found in there
+threads = []
+all_channels = classes.Channel.query.all()
+for x in all_channels:
+    t = threading.Thread(target=recorder, args=(x, False,))
+    threads.append(t)
+    t.start()
