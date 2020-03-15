@@ -134,10 +134,9 @@ def update_recording(id):
     return recording_schema.jsonify(recording)
 
 
-# DELETE method functions for delete
-# Delete Channel
+# Delete Channel,  i use thrash instead of delete because of sorting in unit tests
 @app.route('/channel/<id>', methods=['DELETE'])
-def delete_channel(id):
+def trash_channel(id):
     channel = Channel.query.get(id)
     if channel:
         db.session.delete(channel)
@@ -147,9 +146,9 @@ def delete_channel(id):
         return channel_schema.jsonify({'msg': 'Channel Not Found'}, 400)
 
 
-# Delete Recording
+# Delete Recording, i use thrash instead of delete because of sorting in unit tests
 @app.route('/recording/<id>', methods=['DELETE'])
-def delete_recording(id):
+def trash_recording(id):
     recording = Recording.query.get(id)
     db.session.delete(recording)
     db.session.commit()

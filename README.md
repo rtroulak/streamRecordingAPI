@@ -16,11 +16,11 @@ Project is created with:
 In the application folder create python environment. Python virtual environment is a self-contained directory tree that includes a Python installation and number of additional packages.
 
 
-Check for python version:
+Check python version:
 
 ```python3 -V```
 
-Install Virtual Environment:
+Install Virtual Environment in your system:
 
 ```sudo apt install python3-venv```
 
@@ -47,7 +47,59 @@ or install Python Libraries that required for this porject manually:
 * ```pip install ffmpeg==1.4```
 * ```pip install requests```
 
+# Unit Testing for RestAPI
 
+Start the restAPI server with this command:
+
+```python3 app.py```
+
+Τerminal will display something like this:
+
+
+Output:
+```
+FLASK_APP = app.py
+FLASK_ENV = development
+FLASK_DEBUG = 0
+In folder /home/babufrik/PycharmProjects/bmat_rtroulak
+/home/babufrik/PycharmProjects/bmat_rtroulak/venv/bin/python -m flask run
+ * Serving Flask app "app.py"
+ * Environment: development
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have
+ other ip and port you can replace them
+ 
+ Then run the test file named:
+ ``` python3 test_api.py ```
+ 
+
+If all tests passed you will have this output:
+```
+
+============================= test session starts ==============================
+platform linux -- Python 3.6.9, pytest-5.4.1, py-1.8.1, pluggy-0.13.1 -- ROOTDIR/venv/bin/python
+cachedir: .pytest_cache
+rootdir: ROOTDIR
+collecting ... collected 11 items
+
+test_api.py::TestRecordingRestApi::test_channel_add PASSED               [  9%]
+test_api.py::TestRecordingRestApi::test_channel_update PASSED            [ 18%]
+test_api.py::TestRecordingRestApi::test_get_channel PASSED               [ 27%]
+test_api.py::TestRecordingRestApi::test_get_channel_all PASSED           [ 36%]
+test_api.py::TestRecordingRestApi::test_get_recording PASSED             [ 45%]
+test_api.py::TestRecordingRestApi::test_get_recording_all PASSED         [ 54%]
+test_api.py::TestRecordingRestApi::test_get_recording_channel PASSED     [ 63%]
+test_api.py::TestRecordingRestApi::test_recording_add PASSED             [ 72%]
+test_api.py::TestRecordingRestApi::test_recording_update PASSED          [ 81%]
+test_api.py::TestRecordingRestApi::test_trash_channel PASSED             [ 90%]
+test_api.py::TestRecordingRestApi::test_trash_recording PASSED           [100%]
+
+============================== 11 passed in 0.22s ==============================
+
+Process finished with exit code 0
+```
 
 # Use Stream Recording API
 
@@ -55,7 +107,7 @@ Start the restAPI server with this command:
 
 ```python3 app.py```
 
-RestAPI must start and terminal must display something like this:
+Τerminal will display something like this:
 
 
 Output:
@@ -72,8 +124,8 @@ In folder /home/babufrik/PycharmProjects/bmat_rtroulak
 ```
 http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
 
-The recording code file to start record with the server all the existing channels and to receive
-api user commands via API 
+Then the recording code file to start with the server and start to record all the existing channels from database and 
+wait to get api user commands via API 
 
 Output:
 ```
@@ -83,15 +135,20 @@ Start Record Radio Streaming : Rock FM
 Start Record Radio Streaming : RastaPank UOC 
 ```
 
-You can use all the API endpoints to retrieve,create,edit or retrieve new channel and recording while server is on
-
 
 All the recordings saved on /recordings directory in the project.
 
+
+
+You can use all the API endpoints to retrieve,create,edit or retrieve new channel and recording while server is running.
+We have the complete CRUD endpoints for channel and recording (in this project we need only CRUD of channel but
+i  create for recordings too, maybe for future work of this project will be useful)
+
+
+
+
+
 # API endpoints:
-
-Run the main app.py file of our RestAPI and terminal must display something like this:
-
 ## Retrieve
 
 #### Retrieve all channels 
@@ -159,13 +216,14 @@ Required request data params:
  Example: 
  ```
  
- curl --location --request POST 'http://127.0.0.1:5000/channel' \
+curl --location --request POST 'http://127.0.0.1:5000/channel' \
 --header 'Content-Type: application/json' \
---data-raw ' {
-	"name": "Rock FM",
-  "keyname": "es-rock-01",
-	"type": "radio",
-	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}
+--data-raw '{
+    "keyname": "gr-rstpk12",
+    "name": "RastaPank UOC11",
+    "type": "radio",
+    "url": "http://rs.radio.uoc.gr:8000/uoc_64.mp3"
+}'
 
   ```
 #### Add Recording in the database
@@ -211,14 +269,14 @@ Optional request data params:
  
 Example:
 ```
-curl --location --request PUT 'http://127.0.0.1:5000/channel/7' \
+curl --location --request PUT 'http://127.0.0.1:5000/channel/4' \
 --header 'Content-Type: application/json' \
---data-raw ' {
-	"name": "Rock FM",
-  "keyname": "es-rock-01",
-	"type": "radio",
-	"url": "http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8"}'
-
+--data-raw '{
+    "keyname": "gr-rstp-04",
+    "name": "RastaPank UOC ",
+    "type": "radio",
+    "url": "http://rs.radio.uoc.gr:8000/uoc_64.mp3"
+}'
  ``` 
  
  #### Create a new channel, or update an existing one
@@ -277,6 +335,34 @@ curl --request DELETE  http://127.0.0.1:5000/channel/2
 curl --request DELETE  http://127.0.0.1:5000/recording/2
 ```
 I decided not to require Authentication from my api calls to avoid conflicts and make testing easier 
+
+
+
+Models
+---
+
+### Channel table
+
+Our database tables are:
+
+| Field | Type | Options | Description | 
+| :---: | :---: | --- | :---: |
+| id | INTEGER |  -  | Channel id  (PK)|
+| name| TEXT  | -  | Name of channel|
+| keyname| TEXT|  Must be 10 characters long  | The keyname of channel |
+| type| TEXT|   Enum: <ul><li>radio</li><li>TV</li></ul>  | type of channel, will be radio or TV |
+| url| TEXT  | -  | Url of channel|
+
+
+### Recordings
+
+| Field | Type | Options | Description | 
+| --- | --- | --- | --- |
+| id | INTEGER |  -  |Recording id (PK) |
+| channel_id| INTEGER| - | Channel id (FK on Channel table)|
+| start_time | TEXT|  Datetime ISO 8601 format (YYYY-MM-DD HH:MM:SS)  | start time of recording streaming |
+| end_time | TEXT|  Datetime ISO 8601 format (YYYY-MM-DD HH:MM:SS)  | end time of recording streaming |
+| path | TEXT|  -  | the path of the saved recording |
 
 
 ## Additional Information and usefull links for testing 

@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="627a692d-24ef-45d7-b775-c5a011f20c4e" name="Default Changelist" comment="Ready">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/bmat_rtroulak.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/recorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recs_bmat.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="recs.db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="recs.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="recs.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="raf &lt;rtroulak@protonmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="7a648b47-ea0f-4f17-b171-19bad68b5a66" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$" />
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YybotuyiDonLgGP4k1Ilm2CUuB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest in test_api.py">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bmat_rtroulak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bmat_rtroulak" type="PythonConfigurationType" factoryName="Python">
+      <module name="bmat_rtroulak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_api.TestRecordingRestApi.test_channel_add" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="bmat_rtroulak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.TestRecordingRestApi.test_channel_add&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_api.TestRecordingRestApi.test_delete_recording" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="bmat_rtroulak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.TestRecordingRestApi.test_delete_recording&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_api.TestRecordingRestApi.test_get_channel_all" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="bmat_rtroulak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.TestRecordingRestApi.test_get_channel_all&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_api.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="bmat_rtroulak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_api.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.bmat_rtroulak" />
+      <item itemvalue="Python tests.pytest in test_api.py" />
+      <item itemvalue="Python tests.pytest for test_api.TestRecordingRestApi.test_channel_add" />
+      <item itemvalue="Python tests.pytest for test_api.TestRecordingRestApi.test_get_channel_all" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python tests.pytest for test_api.TestRecordingRestApi.test_delete_recording" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in test_api.py" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python tests.pytest for test_api.TestRecordingRestApi.test_delete_recording" />
+        <item itemvalue="Python tests.pytest for test_api.TestRecordingRestApi.test_channel_add" />
+        <item itemvalue="Python tests.pytest for test_api.TestRecordingRestApi.test_get_channel_all" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:recs_bmat.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:recs_bmat.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@738201c6" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="627a692d-24ef-45d7-b775-c5a011f20c4e" name="Default Changelist" comment="" />
+      <created>1583917959600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583917959600</updated>
+      <workItem from="1583917962533" duration="4008000" />
+      <workItem from="1583922460644" duration="4112000" />
+      <workItem from="1583926598871" duration="24241000" />
+      <workItem from="1584033214700" duration="41335000" />
+      <workItem from="1584225827453" duration="916000" />
+      <workItem from="1584226744672" duration="367000" />
+      <workItem from="1584227121638" duration="44584000" />
+    </task>
+    <task id="LOCAL-00001" summary="Changes">
+      <created>1584043415455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584043415455</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changes">
+      <created>1584051084153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584051084153</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Start Recording Section">
+      <created>1584056899200</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584056899200</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactor the project and add recording procedure">
+      <created>1584207648990</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584207648990</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Try to fix my name on github by pycharm">
+      <created>1584208094738</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584208094738</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Try to fix my name on github by pycharm2">
+      <created>1584208168336</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584208168336</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Try to fix my name on github by pycharm3">
+      <created>1584208477814</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584208477814</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Author name on github almost fixed">
+      <created>1584208595405</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1584208595405</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Create App code and update README.md with testing stream urls">
+      <created>1584222389628</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584222389628</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Create App code and update README.md with testing stream urls">
+      <created>1584225568691</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584225568691</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactor code // add insert of recodings in DB">
+      <created>1584226054310</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1584226054310</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Create new thread on add and create unit tests">
+      <created>1584266281845</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1584266281845</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Ready Functionality of application">
+      <created>1584273087437</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1584273087437</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Ready Functionality of application, Refactor Code and files">
+      <created>1584279547418</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1584279547418</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Ready Functionality of application, Refactor Code and files gain">
+      <created>1584280407866</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584280407866</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Ready Functionality of application, Refactor Code and files app">
+      <created>1584280553498</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1584280553498</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Final Changes on Readmefile and on unit testing">
+      <created>1584293647529</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1584293647529</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes" />
+    <MESSAGE value="Start Recording Section" />
+    <MESSAGE value="Refactor the project and add recording procedure" />
+    <MESSAGE value="Try to fix my name on github by pycharm" />
+    <MESSAGE value="Try to fix my name on github by pycharm2" />
+    <MESSAGE value="Try to fix my name on github by pycharm3" />
+    <MESSAGE value="Author name on github almost fixed" />
+    <MESSAGE value="Create App code and update README.md with testing stream urls" />
+    <MESSAGE value="Refactor code // add insert of recodings in DB" />
+    <MESSAGE value="Create new thread on add and create unit tests" />
+    <MESSAGE value="Ready Functionality of application" />
+    <MESSAGE value="Ready Functionality of application, Refactor Code and files" />
+    <MESSAGE value="Ready Functionality of application, Refactor Code and files gain" />
+    <MESSAGE value="Ready Functionality of application, Refactor Code and files app" />
+    <MESSAGE value="Final Changes on Readmefile and on unit testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Changes on Readmefile and on unit testing" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="555" y="200" width="800" height="677" key="#Notifications" timestamp="1584225793401">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="555" y="200" key="#Notifications/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225793401" />
+    <state x="555" y="200" width="800" height="677" key="#Notifications/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584030478347" />
+    <state x="555" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584309803538">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="555" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584207095329" />
+    <state x="1131" y="1294" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583922483140" />
+    <state x="555" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584309803538" />
+    <state x="100" y="98" width="1720" height="882" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1584231711356">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="100" y="98" width="1720" height="882" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584231711356" />
+    <state x="659" y="342" width="592" height="394" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584226912567">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="659" y="342" width="592" height="394" key="#com.intellij.fileTypes.FileTypeChooser/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584226912567" />
+    <state x="693" y="287" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583943441878">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="693" y="287" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1583943441878" />
+    <state x="541" y="51" width="844" height="916" key="CommitChangelistDialog2" timestamp="1584314478270">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="533" y="81" width="844" height="916" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225568614" />
+    <state x="2453" y="81" width="844" height="916" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584056899130" />
+    <state x="541" y="51" width="844" height="916" key="CommitChangelistDialog2/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584314478270" />
+    <state x="100" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1584278558868">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2020" y="98" width="1720" height="882" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584043384156" />
+    <state x="100" y="98" width="1720" height="882" key="DiffContextDialog/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584278558868" />
+    <state x="738" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584309802301">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1314" y="1390" width="424" height="484" key="FileChooserDialogImpl/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583922480627" />
+    <state x="738" y="310" width="424" height="484" key="FileChooserDialogImpl/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584309802301" />
+    <state x="756" y="455" key="Github.CreateGistDialog" timestamp="1584225661918">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="756" y="455" key="Github.CreateGistDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225661918" />
+    <state x="2612" y="405" width="525" height="268" key="Github.CreatePullRequestDialog" timestamp="1584043283459">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2612" y="405" width="525" height="268" key="Github.CreatePullRequestDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584043283459" />
+    <state x="808" y="434" width="293" height="210" key="Github.ShareDialog" timestamp="1584030516053">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="808" y="434" width="293" height="210" key="Github.ShareDialog/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584030516053" />
+    <state x="732" y="195" width="446" height="687" key="Github.UntrackedFilesDialog" timestamp="1584030624893">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="732" y="195" width="446" height="687" key="Github.UntrackedFilesDialog/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584030624893" />
+    <state width="1872" height="358" key="GridCell.Tab.0.bottom" timestamp="1584313830360">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="936" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225807615" />
+    <state width="1872" height="197" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584056944153" />
+    <state width="1872" height="197" key="GridCell.Tab.0.bottom/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584033184771" />
+    <state width="1872" height="277" key="GridCell.Tab.0.bottom/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583929521919" />
+    <state width="1872" height="358" key="GridCell.Tab.0.bottom/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584313830360" />
+    <state width="1872" height="358" key="GridCell.Tab.0.center" timestamp="1584313830360">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="936" height="336" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225807615" />
+    <state width="1872" height="197" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584056944153" />
+    <state width="1872" height="197" key="GridCell.Tab.0.center/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584033184771" />
+    <state width="1872" height="277" key="GridCell.Tab.0.center/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583929521919" />
+    <state width="1872" height="358" key="GridCell.Tab.0.center/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584313830360" />
+    <state width="1872" height="358" key="GridCell.Tab.0.left" timestamp="1584313830359">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="936" height="336" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225807615" />
+    <state width="1872" height="197" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584056944153" />
+    <state width="1872" height="197" key="GridCell.Tab.0.left/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584033184771" />
+    <state width="1872" height="277" key="GridCell.Tab.0.left/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583929521919" />
+    <state width="1872" height="358" key="GridCell.Tab.0.left/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584313830359" />
+    <state width="1872" height="358" key="GridCell.Tab.0.right" timestamp="1584313830360">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="936" height="336" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225807615" />
+    <state width="1872" height="197" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584056944153" />
+    <state width="1872" height="197" key="GridCell.Tab.0.right/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584033184771" />
+    <state width="1872" height="277" key="GridCell.Tab.0.right/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583929521919" />
+    <state width="1872" height="358" key="GridCell.Tab.0.right/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584313830360" />
+    <state width="1872" height="353" key="GridCell.Tab.1.bottom" timestamp="1584264493669">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="353" key="GridCell.Tab.1.bottom/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584033184768" />
+    <state width="1872" height="342" key="GridCell.Tab.1.bottom/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583922302864" />
+    <state width="1872" height="353" key="GridCell.Tab.1.bottom/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584264493669" />
+    <state width="1872" height="353" key="GridCell.Tab.1.center" timestamp="1584264493669">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="353" key="GridCell.Tab.1.center/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584033184768" />
+    <state width="1872" height="342" key="GridCell.Tab.1.center/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583922302864" />
+    <state width="1872" height="353" key="GridCell.Tab.1.center/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584264493669" />
+    <state width="1872" height="353" key="GridCell.Tab.1.left" timestamp="1584264493668">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="353" key="GridCell.Tab.1.left/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584033184768" />
+    <state width="1872" height="342" key="GridCell.Tab.1.left/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583922302864" />
+    <state width="1872" height="353" key="GridCell.Tab.1.left/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584264493668" />
+    <state width="1872" height="353" key="GridCell.Tab.1.right" timestamp="1584264493669">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="353" key="GridCell.Tab.1.right/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584033184768" />
+    <state width="1872" height="342" key="GridCell.Tab.1.right/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583922302864" />
+    <state width="1872" height="353" key="GridCell.Tab.1.right/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584264493669" />
+    <state width="259" height="542" key="HiddenNamespacesPopup" timestamp="1583923230205">
+      <screen x="576" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="259" height="542" key="HiddenNamespacesPopup/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583923230205" />
+    <state x="667" y="255" width="575" height="568" key="MultipleFileMergeDialog" timestamp="1584225599183">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="667" y="255" key="MultipleFileMergeDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225599183" />
+    <state x="2587" y="255" width="575" height="568" key="MultipleFileMergeDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584056938731" />
+    <state x="456" y="187" key="SettingsEditor" timestamp="1584229594493">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="456" y="187" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584208192226" />
+    <state x="2376" y="187" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584053423726" />
+    <state x="456" y="187" key="SettingsEditor/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1583946963567" />
+    <state x="1032" y="1267" key="SettingsEditor/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583926934357" />
+    <state x="456" y="187" key="SettingsEditor/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584229594493" />
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584293654841">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584225574071" />
+    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584056909160" />
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584293654841" />
+    <state x="849" y="448" width="366" height="238" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1584267056798">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1425" y="1528" width="366" height="238" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583923330235" />
+    <state x="849" y="448" width="366" height="238" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584267056798" />
+    <state x="723" y="373" width="474" height="358" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1584266006196">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1299" y="1453" width="474" height="366" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583927671781" />
+    <state x="723" y="373" width="474" height="358" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584266006196" />
+    <state x="672" y="133" width="552" height="838" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584266461029">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="672" y="133" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584224257061" />
+    <state x="1248" y="1213" width="566" height="838" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583927752880" />
+    <state x="672" y="133" width="552" height="838" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584266461029" />
+    <state x="2477" y="218" width="786" height="642" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1584043262830">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2477" y="218" width="786" height="642" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@1920.0.1920.1080" timestamp="1584043262830" />
+    <state x="100" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584227590774">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="100" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1583945384346" />
+    <state x="100" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584227590774" />
+    <state x="626" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1584227125247">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="626" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584033213651" />
+    <state x="1202" y="1447" key="com.intellij.ide.util.TipDialog/576.1080.1920.1080/0.0.1920.1080/1920.0.1920.1080@576.1080.1920.1080" timestamp="1583926702514" />
+    <state x="626" y="367" key="com.intellij.ide.util.TipDialog/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584227125247" />
+    <state x="613" y="136" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584278543970">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="613" y="136" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584278543970" />
+    <state x="738" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584295493695">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="738" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584295493695" />
+    <state x="613" y="83" width="694" height="912" key="find.popup" timestamp="1584229296265">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="613" y="83" width="694" height="912" key="find.popup/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584229296265" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1584294815390">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080/576.1080.1920.1080@0.0.1920.1080" timestamp="1584204653974" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/576.1080.1920.1080/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584294815390" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_for_test_api_TestRecordingRestApi_test_get_channel_all.coverage" NAME="pytest for test_api.TestRecordingRestApi.test_get_channel_all Coverage Results" MODIFIED="1584311848674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$app.coverage" NAME="app Coverage Results" MODIFIED="1584313820811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_for_test_api_TestRecordingRestApi_test_get_recording_channel.coverage" NAME="pytest for test_api.TestRecordingRestApi.test_get_recording_channel Coverage Results" MODIFIED="1584281626350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_for_test_api_TestRecordingRestApi_test_channel_update.coverage" NAME="pytest for test_api.TestRecordingRestApi.test_channel_update Coverage Results" MODIFIED="1584311285015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$Flask__record_py_create_app_.coverage" NAME="Flask (record.py:create_app) Coverage Results" MODIFIED="1584029044048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_for_test_api_TestRecordingRestApi_test_get_recording_all.coverage" NAME="pytest for test_api.TestRecordingRestApi.test_get_recording_all Coverage Results" MODIFIED="1584232096614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$Flask__api_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1584281538818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_for_test_api_TestRecordingRestApi_test_channel_add.coverage" NAME="pytest for test_api.TestRecordingRestApi.test_channel_add Coverage Results" MODIFIED="1584311879602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$record.coverage" NAME="record Coverage Results" MODIFIED="1584204718068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$Flask__api_api_py_.coverage" NAME="Flask (api/api.py) Coverage Results" MODIFIED="1584226149069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/untitled$untitled.coverage" NAME="untitled Coverage Results" MODIFIED="1583918057281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$Flask__app_py_.coverage" NAME="Flask (api.py) Coverage Results" MODIFIED="1584224298360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$recorder.coverage" NAME="recorder Coverage Results" MODIFIED="1584292134442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/untitled$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1583920624091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_for_test_api_TestRecordingRestApi_test_delete_recording.coverage" NAME="pytest for test_api.TestRecordingRestApi.test_delete_recording Coverage Results" MODIFIED="1584312587875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_for_test_api_TestRecordingRestApi.coverage" NAME="pytest for test_api.TestRecordingRestApi Coverage Results" MODIFIED="1584310742803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_for_test_api_TestRecordingRestApi_test_recording_update.coverage" NAME="pytest for test_api.TestRecordingRestApi.test_recording_update Coverage Results" MODIFIED="1584311121635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmat_rtroulak$pytest_in_test_api_py.coverage" NAME="pytest in test_api.py Coverage Results" MODIFIED="1584313830334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

@@ -6,7 +6,7 @@ import os
 import classes
 
 duration = 1800  # 30 min to Seconds
-tmp_duration = 1800  # 30 min to Seconds
+duration_restart = 1785  # 29:45 min.  Overlap the previous file  by 15 seconds to avoid gap between them
 
 
 def insert_recording(channel, now, end, filename):
@@ -22,15 +22,15 @@ def recorder(channel, debug=False):
     # check if channel is deleted or active yet
     if new_channel:
         # restart thread every 30 minutes
-        threading.Timer(tmp_duration, recorder, [channel, False]).start()
-        # Datetime for now and after 30 minutes
-        now = datetime.now()
-        end = datetime.now() + timedelta(seconds=duration)
+        threading.Timer(duration_restart, recorder, [channel, False]).start()
+        # Datetime for now and after 30 minutes in UTC timezone
+        now = datetime.utcnow()
+        end = datetime.utcnow() + timedelta(seconds=duration)
         start = now.strftime("%Y%m%d_%H%M%S")  # create datetime file format
 
         if channel.type == 'radio':  # the case of radio streams
             print('Start Record Radio Streaming : %s' % channel.name)
-            # create the filename with stream information
+            # create the filename with stream information keyname_servername_datetime.format
             filename = str(channel.keyname) + '_' + socket.gethostname() + '_' + str(start) + '.aac'
             # command for radio streams
             cmd = 'ffmpeg -i "' + str(channel.url) + '" -acodec aac -ab 48000 -ar 22050 -ac 1 -t {1} ' \
@@ -43,7 +43,7 @@ def recorder(channel, debug=False):
 
         elif channel.type == 'TV':  # the case of TV streams
             print('Start Record TV Streaming : %s' % channel.name)
-            # create the filename with stream information
+            # create the filename with stream information keyname_servername_datetime.format
             filename = str(channel.keyname) + '_' + socket.gethostname() + '_' + str(start) + '.mp4'
             # command for TV streams
             cmd = 'ffmpeg -i "' + str(channel.url) + '" -r 10 -vcodec libx264 -movflags frag_keyframe -acodec aac -ab ' \
