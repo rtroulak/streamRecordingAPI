@@ -3,22 +3,22 @@ from datetime import datetime, timedelta
 import socket
 import os
 
-import api
+import app
 
 duration = 1800  # 30 min to Seconds
 tmp_duration = 1800  # 30 min to Seconds
 
 
 def insert_recording(channel, now, end, filename):
-    Recording = api.Recording(channel_id=channel.id, start_time=now, end_time=end, path='/recording/' + filename)
-    api.Recording.query
-    api.db.session.add(Recording)
-    api.db.session.commit()
+    Recording = app.Recording(channel_id=channel.id, start_time=now, end_time=end, path='/recording/' + filename)
+    app.Recording.query
+    app.db.session.add(Recording)
+    app.db.session.commit()
 
 
 # the main worker function of the threads
 def recorder(channel, debug=False):
-    new_channel = api.Channel.query.get(channel.id)
+    new_channel = app.Channel.query.get(channel.id)
     # check if channel is deleted or active yet
     if new_channel:
         # restart thread every 30 minutes
@@ -34,7 +34,7 @@ def recorder(channel, debug=False):
             filename = str(channel.keyname) + '_' + socket.gethostname() + '_' + str(start) + '.aac'
             # command for radio streams
             cmd = 'ffmpeg -i "' + str(channel.url) + '" -acodec aac -ab 48000 -ar 22050 -ac 1 -t {1} ' \
-                                                     'recordings/{0} '.format(str(filename), str(tmp_duration))
+                                                     'recordings/{0} '.format(str(filename), str(duration))
             if not debug:
                 cmd += '> /dev/null 2>&1'  # this command hide terminal messages from python console
             os.system(cmd)
@@ -48,7 +48,7 @@ def recorder(channel, debug=False):
             # command for TV streams
             cmd = 'ffmpeg -i "' + str(channel.url) + '" -r 10 -vcodec libx264 -movflags frag_keyframe -acodec aac -ab ' \
                                                      '48000 -ar 22050 -ac 1 -s 160x120 -t {1} ' \
-                                                     'recordings/{0} '.format(str(filename), str(tmp_duration))
+                                                     'recordings/{0} '.format(str(filename), str(duration))
             if not debug:
                 cmd += '> /dev/null 2>&1'  # this command hide terminal messages from python console
             os.system(cmd)
