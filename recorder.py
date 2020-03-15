@@ -3,22 +3,22 @@ from datetime import datetime, timedelta
 import socket
 import os
 
-import app
+import classes
 
 duration = 1800  # 30 min to Seconds
 tmp_duration = 1800  # 30 min to Seconds
 
 
 def insert_recording(channel, now, end, filename):
-    Recording = app.Recording(channel_id=channel.id, start_time=now, end_time=end, path='/recording/' + filename)
-    app.Recording.query
-    app.db.session.add(Recording)
-    app.db.session.commit()
+    Recording = classes.Recording(channel_id=channel.id, start_time=now, end_time=end, path='/recording/' + filename)
+    classes.Recording.query
+    classes.db.session.add(Recording)
+    classes.db.session.commit()
 
 
 # the main worker function of the threads
 def recorder(channel, debug=False):
-    new_channel = app.Channel.query.get(channel.id)
+    new_channel = classes.Channel.query.get(channel.id)
     # check if channel is deleted or active yet
     if new_channel:
         # restart thread every 30 minutes
