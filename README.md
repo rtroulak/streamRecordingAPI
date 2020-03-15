@@ -196,9 +196,6 @@ curl --location --request PUT 'http://127.0.0.1:5000/recording/3' \
 
   ```
 
-There is a sub-directory test_api, where I've added some sample data (scraped with Scrapy) to the databse, using the API.
-
-
 
 ## Delete
   
@@ -227,7 +224,7 @@ curl --request DELETE  http://127.0.0.1:5000/recording/2
 I decided not to require Authentication from my api calls to avoid conflicts and make testing easier 
 
 
-##Additional Information for testing 
+## Additional Information for testing 
 
 Some stream urls for TV and Radio streams which have permissions to read from our application:
 
