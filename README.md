@@ -111,6 +111,8 @@ or run manually 2 commands:
 
 * ``` rm recordings/*.aac ``` 
 
+* ``` rm recordings/*.mp4 ``` 
+
 (delete all files from recording folder that created from unit test post and put cases)
 
 * ``` sudo killall ffmpeg  ``` 
@@ -140,8 +142,12 @@ In folder /home/babufrik/PycharmProjects/bmat_rtroulak
 ```
 http://127.0.0.1 is our locahost server and 5000 is our port.We will use these for our examples otherwise if you have other ip and port you can replace them
 
-Then the recording code file to start with the server and start to record all the existing channels from database and 
-wait to get api user commands via API 
+Run:
+
+```python3 start.py```
+
+And then the recording code file to start with the server and start to record all the existing channels from database and 
+wait to get api user commands via API (main functionality of recording is on ```recorder.py```)
 
 Output:
 ```
