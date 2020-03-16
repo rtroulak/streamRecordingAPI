@@ -176,6 +176,19 @@ def trash_recording(id):
         return not_found()
 
 
+@app.route('/recording', methods=['DELETE'])
+def trash_recording_all():
+    recording = Recording.query.delete()
+    print(recording)
+    if recording:  # delete row from db
+        db.session.delete(recording)
+        db.session.commit()
+
+        return recording_schema.jsonify(recording)
+    else:  # return not found 404 response
+        return not_found()
+
+
 def shutdown_server():
     func = request.environ.get('werkzeug.server.shutdown')
     if func is None:
@@ -187,7 +200,6 @@ def shutdown_server():
 def will_shutdown():
     shutdown_server()
     return 'Server shutting down...'
-
 
 
 if __name__ == '__main__':

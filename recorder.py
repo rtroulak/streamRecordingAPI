@@ -13,6 +13,7 @@ def insert_recording(channel, now, end, filename):
     Recording = classes.Recording(channel_id=channel.id, start_time=now, end_time=end, path='/recording/' + filename)
     classes.Recording.query
     classes.db.session.add(Recording)
+    print("Add")
     classes.db.session.commit()
 
 
