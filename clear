@@ -1,0 +1,4 @@
+#!/bin/bash
+rm recordings/*.aac
+rm recordings/*.mp4
+sudo killall ffmpeg
