@@ -1,7 +1,11 @@
-# Stream Recording API
-Create a CRUD recording RestAPI using Flask, Marsmallow and SQLAlchemy
+# Stream Recording App with RestAPI
+Create a CRUD **recording** **RestAPI** using Flask, Marsmallow and SQLAlchemy
 
-
+* **Author:** rtroulak
+* **Firstname:** Rafail Georgios
+* **Lastname:** Troulakis
+* **Email:** rtroulak@protonmail.com
+* **Date:** 16-03-2020
 
 ## Technologies
 Project is created with:
@@ -58,7 +62,7 @@ In the requirements file there are all the required packages that required for t
 ```pip install -r requirements.txt```
 
 
-or install Python Libraries that required for this porject manually:
+or install Python Libraries that required for this project manually:
 * ```pip install flask```
 * ```pip install Flask-SQLAlchemy```
 * ```pip install flask_marshmallow```
@@ -126,7 +130,7 @@ Process finished with exit code 0
 
 Then clear server from the test files and thread processes that will be created with bash
 script 
-``` ./clear ```
+* ``` ./clear ```
 
 or run manually 2 commands:
 
@@ -239,7 +243,7 @@ curl http://127.0.0.1:5000/recording/1
 		
 Example: 	
 ```
-curl http://127.0.0.1:5000/channel/1/recordings
+curl http://127.0.0.1:5000/channel/1/recording
 ```
 
 
@@ -262,8 +266,8 @@ Required request data params:
 curl --location --request POST 'http://127.0.0.1:5000/channel' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "keyname": "gr-rstpk12",
-    "name": "RastaPank UOC11",
+    "keyname": "gr-new--12",
+    "name": "New UOC",
     "type": "radio",
     "url": "http://rs.radio.uoc.gr:8000/uoc_64.mp3"
 }'
@@ -312,11 +316,11 @@ Optional request data params:
  
 Example:
 ```
-curl --location --request PUT 'http://127.0.0.1:5000/channel/4' \
+curl --location --request PUT 'http://127.0.0.1:5000/channel/1' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "keyname": "gr-rstp-04",
-    "name": "RastaPank UOC ",
+    "keyname": "gr-rstp-05",
+    "name": "RastaPank UOC New Name ",
     "type": "radio",
     "url": "http://rs.radio.uoc.gr:8000/uoc_64.mp3"
 }'
@@ -364,7 +368,7 @@ curl --location --request PUT 'http://127.0.0.1:5000/recording/3' \
  Example:
 
 ```
-curl --request DELETE  http://127.0.0.1:5000/channel/2
+curl --request DELETE  http://127.0.0.1:5000/channel/1
 ```
 
  #### Delete a recording
@@ -375,7 +379,7 @@ curl --request DELETE  http://127.0.0.1:5000/channel/2
  Example:
 
 ```
-curl --request DELETE  http://127.0.0.1:5000/recording/2
+curl --request DELETE  http://127.0.0.1:5000/recording/1
 ```
 I decided not to require Authentication from my api calls to avoid conflicts and make testing easier 
 
