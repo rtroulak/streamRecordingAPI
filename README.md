@@ -9,8 +9,29 @@ Project is created with:
 * Flask version: 1.1.1
 * Flask-SQLAlchemy version: 2.4.1
 * flask-marshmallow version: 2.4.1
+* pytest
+* ffmpeg 1.4
+* ffmpeg-python
 * OS: Ubuntu 18.04
 * IDE: Pycharm
+
+## Submitted Files
+
+### Files
+* ```app.py``` (server and restAPI file)
+* ```classes.py``` (Classes and instances of Db for this project)
+* ```recorder.py``` ( The maine recording code with the function that do this job )
+* ```recs.db``` (db file that used in this project)
+* ```requirements.txt``` (all required libraries and packages)
+* ```setup.py```
+* ```start.py``` (start all saved streams in db to record)
+* ```test_api.py``` (unit test file)
+* ```rtroulak_Logic_Test_BMAT.xlsx``` (logic test)
+* ```clear``` (bash script that clear dump files and kill thread processes after unit testing)
+### Folders
+* ```sample_recordings_results ```(submitted only to check some results with recordings of 1min(!) each to avid large files
+* ```recording``` (The main folder that recordings will be saved)
+
 
 # Installation
 In the application folder create python environment. Python virtual environment is a self-contained directory tree that includes a Python installation and number of additional packages.
@@ -103,7 +124,7 @@ Process finished with exit code 0
 
 ```
 
-Then we must clear server with the test files and processes that will be created with our bash
+Then clear server from the test files and thread processes that will be created with bash
 script 
 ``` ./clear ```
 
@@ -162,7 +183,7 @@ All the recordings saved on /recordings directory in the project.
 
 
 
-You can use all the API endpoints to retrieve,create,edit or retrieve new channel and recording while server is running.
+Use all the API endpoints to retrieve,create,edit or retrieve new channel and recording while server is running.
 We have the complete CRUD endpoints for channel and recording (in this project we need only CRUD of channel but
 i  create for recordings too, maybe for future work of this project will be useful)
 
@@ -218,7 +239,7 @@ curl http://127.0.0.1:5000/recording/1
 		
 Example: 	
 ```
-curl http://127.0.0.1:5000/channel/<channel_id>/recordings
+curl http://127.0.0.1:5000/channel/1/recordings
 ```
 
 
@@ -264,9 +285,9 @@ Required request data params:
 curl --location --request POST 'http://127.0.0.1:5000/recording' \
 --header 'Content-Type: application/json' \
 --data-raw '    {
-        "channel_id": 6,
+        "channel_id": 1,
         "end_time": 158392981021020,
-        "path": "http://hlsliveamdgl1-lh.akama\nihd.net/i/hlsdvrlive_1@584096\n/index_0400_av-p.m3u8?sd=10&r\nebase1=on",
+        "path": "/recording/",
         "start_time": 158392981021030
     }'
   ```
@@ -326,7 +347,7 @@ curl --location --request PUT 'http://127.0.0.1:5000/recording/3' \
 	"channel_id": 2,
   "start_time": 1583929812000,
 	"end_time": 1583929812000,
-	"url": "http://hlsliveamdgl1-lh.akamaihd.net/i/hlsdvrlive_1@584096/index_0400_av-p.m3u8?sd=10&rebase=on"}'
+	"path": "/recording/"}'
     
 
   ```
