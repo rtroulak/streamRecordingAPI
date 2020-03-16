@@ -1,6 +1,7 @@
 import unittest
 import requests
 import pytest
+
 pytest.channel_id = 0
 pytest.recording_id = 0
 
@@ -89,6 +90,10 @@ class TestRecordingRestApi(unittest.TestCase):
     def test_trash_channel(self):
         channel = '/' + str(pytest.channel_id)
         r = requests.delete(self.__api_base_url + self.__channel_url + channel)
+        self.assertEqual(r.status_code, 200)
+
+    def test_will_shutdown(self):
+        r = requests.post(self.__api_base_url + '/shutdown')
         self.assertEqual(r.status_code, 200)
 
 

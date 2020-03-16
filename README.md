@@ -79,31 +79,47 @@ If all tests passed you will have this output:
 ```
 
 ============================= test session starts ==============================
-platform linux -- Python 3.6.9, pytest-5.4.1, py-1.8.1, pluggy-0.13.1 -- ROOTDIR/venv/bin/python
+platform linux -- Python 3.6.9, pytest-5.4.1, py-1.8.1, pluggy-0.13.1 -- /home/babufrik/PycharmProjects/bmat_rtroulak/venv/bin/python
 cachedir: .pytest_cache
-rootdir: ROOTDIR
-collecting ... collected 11 items
+rootdir: /home/babufrik/PycharmProjects/bmat_rtroulak
+collecting ... collected 12 items
 
-test_api.py::TestRecordingRestApi::test_channel_add PASSED               [  9%]
-test_api.py::TestRecordingRestApi::test_channel_update PASSED            [ 18%]
-test_api.py::TestRecordingRestApi::test_get_channel PASSED               [ 27%]
-test_api.py::TestRecordingRestApi::test_get_channel_all PASSED           [ 36%]
-test_api.py::TestRecordingRestApi::test_get_recording PASSED             [ 45%]
-test_api.py::TestRecordingRestApi::test_get_recording_all PASSED         [ 54%]
-test_api.py::TestRecordingRestApi::test_get_recording_channel PASSED     [ 63%]
-test_api.py::TestRecordingRestApi::test_recording_add PASSED             [ 72%]
-test_api.py::TestRecordingRestApi::test_recording_update PASSED          [ 81%]
-test_api.py::TestRecordingRestApi::test_trash_channel PASSED             [ 90%]
-test_api.py::TestRecordingRestApi::test_trash_recording PASSED           [100%]
+test_api.py::TestRecordingRestApi::test_channel_add PASSED               [  8%]
+test_api.py::TestRecordingRestApi::test_channel_update PASSED            [ 16%]
+test_api.py::TestRecordingRestApi::test_get_channel PASSED               [ 25%]
+test_api.py::TestRecordingRestApi::test_get_channel_all PASSED           [ 33%]
+test_api.py::TestRecordingRestApi::test_get_recording PASSED             [ 41%]
+test_api.py::TestRecordingRestApi::test_get_recording_all PASSED         [ 50%]
+test_api.py::TestRecordingRestApi::test_get_recording_channel PASSED     [ 58%]
+test_api.py::TestRecordingRestApi::test_recording_add PASSED             [ 66%]
+test_api.py::TestRecordingRestApi::test_recording_update PASSED          [ 75%]
+test_api.py::TestRecordingRestApi::test_trash_channel PASSED             [ 83%]
+test_api.py::TestRecordingRestApi::test_trash_recording PASSED           [ 91%]
+test_api.py::TestRecordingRestApi::test_will_shutdown PASSED             [100%]
 
-============================== 11 passed in 0.22s ==============================
+============================== 12 passed in 0.23s ==============================
 
 Process finished with exit code 0
+
 ```
+
+Then we must clear server with the test files and processes that will be created with our bash
+script 
+``` ./clear ```
+
+or run manually 2 commands:
+
+* ``` rm recordings/*.aac ``` 
+
+(delete all files from recording folder that created from unit test post and put cases)
+
+* ``` sudo killall ffmpeg  ``` 
+
+(delete all ffmpeg processes that created from unit test post and put cases)
 
 # Use Stream Recording API
 
-Start the restAPI server with this command:
+Tp start the restAPI server normally and use application start server with this command:
 
 ```python3 app.py```
 
@@ -249,7 +265,7 @@ curl --location --request POST 'http://127.0.0.1:5000/recording' \
     }'
   ```
   
-## Update (or Create) 
+## Update
  
 #### Create a new channel, or update an existing one
     
@@ -336,7 +352,17 @@ curl --request DELETE  http://127.0.0.1:5000/recording/2
 ```
 I decided not to require Authentication from my api calls to avoid conflicts and make testing easier 
 
+### Shutdown
 
+```
+curl --request POST  http://127.0.0.1:5000/shutdown
+```
+
+```
+curl --location --request POST 'http://127.0.0.1:5000/shutdown' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+```
 
 Models
 ---
@@ -367,7 +393,7 @@ Our database tables are:
 
 ## Additional Information and usefull links for testing 
 
-Some stream urls for TV and Radio streams which have permissions to read from our application:
+Some playable stream urls for TV and Radio which have permissions to read from our application:
 
 |     Name       | Keyname  |  type  | url  |
 |-------------| :-----:| :--------------:| :-----:|
@@ -375,7 +401,7 @@ Some stream urls for TV and Radio streams which have permissions to read from ou
 |   Kool London Radio  |     uk-koo--01    |   TV  |  http://w10.streamgb.com:1935/kool/kool/playlist.m3u8   |
 |  MAD TV Greece   |     gr-mad--03    |   TV  |   https://itv.streams.ovh/magictv/magictv/playlist.m3u8  |
 |   Music Top TV  |     ar-top--01    |   TV  |   http://live-edge01.telecentro.net.ar/live/msctphd-720/playlist.m3u8  |
-|   Vega Baja TV  |   es-vega-01      |  TV   |  http://185.29.68.24/tvb.m3u8   |
+|    Kuriakos Music  |  us-kmus-01     |  TV   | http://c2.manasat.com:1935/kmusic/kmusic3/FluxusTV.m3u8?fluxustv.m3u8   |
 |  Radio 3   |    es-rn3--01     |   radio  |  http://hlsliveamdgl0-lh.akamaihd.net/i/rnerne3_1@793568/index_32_a-p.m3u8   |
 |   Rock FM  |     es-rock-01    |  radio   |   http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8  |
 |  RastaPank UOC   |     gr-rstpk-1    |  radio   |   http://rs.radio.uoc.gr:8000/uoc_64.mp3  |
