@@ -87,10 +87,6 @@ class TestRecordingRestApi(unittest.TestCase):
         r = requests.delete(self.__api_base_url + self.__recording_url + recording)
         self.assertEqual(r.status_code, 200)
 
-    def test_trash_recording_all(self):
-        r = requests.delete(self.__api_base_url + self.__recording_url)
-        self.assertEqual(r.status_code, 200)
-
 
     def test_trash_channel(self):
         channel = '/' + str(pytest.channel_id)

@@ -72,7 +72,7 @@ http://127.0.0.1 is our locahost server and 5000 is our port.We will use these f
  other ip and port you can replace them
  
  Then run the test file named:
- ``` python3 test_api.py ```
+ ``` pytest test_api.py ```
  
 
 If all tests passed you will have this output:

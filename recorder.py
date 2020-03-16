@@ -13,7 +13,6 @@ def insert_recording(channel, now, end, filename):
     Recording = classes.Recording(channel_id=channel.id, start_time=now, end_time=end, path='/recording/' + filename)
     classes.Recording.query
     classes.db.session.add(Recording)
-    print("Add")
     classes.db.session.commit()
 
 
@@ -65,10 +64,3 @@ def recorder(channel, debug=False):
         return
 
 
-# Look up to the channel table in the DB and start recording any url found in there
-threads = []
-all_channels = classes.Channel.query.all()
-for x in all_channels:
-    t = threading.Thread(target=recorder, args=(x, False,))
-    threads.append(t)
-    t.start()
